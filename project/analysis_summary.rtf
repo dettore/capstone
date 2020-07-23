@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Tahoma;}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c12157\c12157;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww17940\viewh10380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 There was a dataset on kaggle.com that I found that looked to be interesting (https://www.kaggle.com/ryanxjhan/cbc-news-coronavirus-articles-march-26).   It is a COVID-19 News Articles Open Research Dataset, with links to nearly 7,000 news articles from CBC News about the coronavirus-related infectious diseases.\
+\
+The data in the links file is just a list of URLs, so it was pretty clean already.   I was able to crawl the URLs on the CBC news site and use Beautiful Soup to extract the title for each article.   Instead of downloading all 7,000 articles, I had the crawler stop at 1,000.   The crawler was able to restart from the last retrieved URL if it was interrupted.  I then stored the URL, tag and title text in a database for later analysis.   \
+\
+Cleaning up the data was easy since I based it on the gword.py example that we used previously.   There were some identifying characters that needed to be stripped, but the rest of the cleanup was as it was in the example.  \
+\
+I end up using it to do a word frequency visualization, with \'91coronavirus\'92 being the largest word on the visualization.   Since the original search term that created the link file was \'91coronavirus\'92, that was not surprising.   What was surprising was the frequency of the rest of the words.   There were probably a half a dozen that were more prominent than the rest, but nothing approaching the most frequent word.  The sample was take from some time in March, so the story was still somewhat playing out.    \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+Future enhancements could include extracting the publish date for each article and then plotting a line chart that shows daily publish counts over time.   Another enhancement may be to perform a simple sentiment analysis using NLTK. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+The experience that I gained from doing this project will benefit you in the future by forming the basis for any number of analysis projects. I do plan on taking the Data Science Specialization offered on Coursera.   I can definitely see why it was recommended to take this Python Specialization first.\
+\
+}
